@@ -20,3 +20,13 @@ qsuf=qalert=qabaixo=0
 for i in range(1,n+1):
   nome = input(f"Entre com o nome do produto {i} produto: ")
   quant=int(input("Entre com a quantidade em estoque do {i} produto: "))
+  if quant >=100:
+    qsuf+=1
+  elif quant >= 50:
+    qalert+=1
+  else:
+    qabaixo+=1
+print(f" Relatorio da Turma com {n} alunos")
+print(f"Temos {qsuf} que produtos com estoque suficiente corresponde {qsuf/n*100}% dos produtos ")
+print(f"Temos {qalert} que podutos com estoque em alerta corresponde {qalert/n*100}% dos produtos ")
+print(f"Temos {qabaixo} que produtos com estoque abaixo corresponde {qabaixo/n*100}% dos produtos  ")
